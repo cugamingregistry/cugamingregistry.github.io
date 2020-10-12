@@ -1,0 +1,48 @@
+<div class="outer-container" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="add-club-card">
+        <form [formGroup]="cardForm">
+            <mat-form-field formControlName="name" ngDefaultControl class="add-club-field" appearance="fill">
+                <mat-label>Club Name</mat-label>
+                <input required matInput>
+            </mat-form-field>
+            <mat-form-field formControlName="description" ngDefaultControl class="add-club-field" appearance="fill">
+                <mat-label>Club Description</mat-label>
+                <textarea required matInput></textarea>
+            </mat-form-field>
+            <mat-form-field formControlName="logo" ngDefaultControl class="add-club-field" appearance="fill">
+                <mat-label>Club Logo</mat-label>
+                <input required matInput>
+            </mat-form-field>
+            <mat-form-field formControlName="type" ngDefaultControl class="add-club-field" appearance="fill">
+                <mat-label>Club Type</mat-label>
+                <mat-select formControlName="type" required>
+                    <mat-option value="option">Social</mat-option>
+                    <mat-option value="option">Career</mat-option>
+                    <mat-option value="option">Gaming</mat-option>
+                    <mat-option value="option">Other</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div fxLayout="row" fxLayoutAlign="space-between">
+                <mat-form-field formControlName="discord" ngDefaultControl appearance="fill">
+                    <mat-label>Discord</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field formControlName="website" ngDefaultControl appearance="fill">
+                    <mat-label>Website</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field formControlName="slack" ngDefaultControl appearance="fill">
+                    <mat-label>Slack</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field formControlName="twitter" ngDefaultControl appearance="fill">
+                    <mat-label>Twitter</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </form>
+        <mat-card-actions align="end">
+            <button color="primary" [disabled]="!cardForm.valid" mat-raised-button (click)="submitCard()">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

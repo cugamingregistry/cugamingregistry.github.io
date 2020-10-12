@@ -1,0 +1,12 @@
+.outer-container{
+    height:90%;
+}
+.add-club-card{
+    width: 70%;
+    padding: 40px;
+    border-radius: 0px;
+}
+
+.add-club-field{
+    width: 100%;
+}
