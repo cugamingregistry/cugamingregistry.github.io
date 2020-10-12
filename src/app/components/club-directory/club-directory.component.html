@@ -1,9 +1,8 @@
 <div class="socials-container">
     <div fxLayout="row" fxLayoutAlign="start center">
-        <app-social-card *ngFor="let card of allCards" name="{{card.name}}" description="{{card.description}}"
+        <app-social-card *ngFor="let card of cards | async" name="{{card.name}}" description="{{card.description}}"
             image="{{card.image}}" website="{{card.website}}" slack="{{card.slack}}" discord="{{card.discord}}"
             twitter="{{card.twitter}}" twitch="{{card.twitch}}" clubType="{{card.clubType}}" logo="{{card.logo}}">
         </app-social-card>
     </div>
-
 </div>

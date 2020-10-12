@@ -14,6 +14,7 @@ import { SocialCardComponent } from './components/social-card/social-card.compon
 import { HttpClientModule } from '@angular/common/http';
 import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
 import { AddClubComponent } from './components/add-club/add-club.component';
+import { AngularFireModule } from '@angular/fire';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AddClubComponent } from './components/add-club/add-club.component';
     MaterialModule,
     FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   entryComponents: [CustomDialogComponent],
