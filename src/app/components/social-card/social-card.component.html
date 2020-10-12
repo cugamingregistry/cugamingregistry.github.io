@@ -1,0 +1,32 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" style="background-image: url({{logo}})"></div>
+      <mat-card-title>{{name}}</mat-card-title>
+      <mat-card-subtitle>{{clubType}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="{{image}}"> -->
+    <!-- <mat-card-content>
+      <p>
+        {{description}}
+      </p>
+    </mat-card-content> -->
+    <mat-card-actions align="end">
+        <a *ngIf="twitch" target ="_blank" href="{{twitch}}" mat-icon-button>
+            <mat-icon matTooltip="Twitch" matTooltipPosition='above' style="background: url('https://api.iconify.design/logos:twitch.svg') no-repeat center center / contain;"></mat-icon>
+        </a>
+          <a *ngIf="discord" target ="_blank" href="{{discord}}" mat-icon-button>
+            <mat-icon matTooltip="Discord" matTooltipPosition='above' style="background: url('https://api.iconify.design/logos:discord.svg') no-repeat center center / contain;"></mat-icon>
+          </a>
+          <a *ngIf="slack" target ="_blank" href="{{slack}}" mat-icon-button>
+            <mat-icon matTooltip="Slack" matTooltipPosition='above' style="background: url('https://api.iconify.design/logos:slack-icon.svg') no-repeat center center / contain;"></mat-icon>
+          </a>
+          <a *ngIf="twitter" target ="_blank" href="{{twitter}}" mat-icon-button>
+            <mat-icon matTooltip="Twitter" matTooltipPosition='above' style="background: url('https://api.iconify.design/logos:twitter.svg') no-repeat center center / contain;"></mat-icon>
+          </a>
+
+          <a *ngIf="website" target ="_blank" href="{{website}}" mat-icon-button>
+            <mat-icon matTooltip="Website" matTooltipPosition='above' style="background: url('https://api.iconify.design/dashicons:admin-site-alt3.svg') no-repeat center center / contain;"></mat-icon>
+          </a>
+          <button mat-raised-button (click)="openDialog()">Info</button>
+    </mat-card-actions>
+  </mat-card>
